@@ -6,9 +6,7 @@
       <class name="tkptest.tests.UnoLogin">
         <methods>
           <include name="launchApplication"/>
-          <include name="promotionBanner"/>
-          <include name="dashboardPage"/>
-          <include name="propertyListPage"/>
+          <include name="dashboardPageUrl"/>
         </methods>
       </class> <!-- tkptest.tests.UnoLogin -->
     </classes>

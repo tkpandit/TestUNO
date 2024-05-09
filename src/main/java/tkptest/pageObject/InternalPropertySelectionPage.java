@@ -32,6 +32,7 @@ public class InternalPropertySelectionPage extends AbstractComponent{
 
 
 	public void getPropertyTab(String tabName) throws InterruptedException {
+		waitForElementToDisappear(loader);
 		WebElement tabs =  tabButtons.stream().filter(tabBtn->
 		tabBtn.getText().equals(tabName)).findFirst().orElse(null);
 		tabs.click();
