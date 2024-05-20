@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Regression(failed)">
     <classes>
       <class name="tkptest.tests.UnoLogin">
         <methods>
           <include name="launchApplication"/>
-          <include name="dashboardPageUrl"/>
+          <include name="assertSuccessLogin"/>
+          <include name="propertySetup"/>
+          <include name="megaMenuTitle"/>
+          <include name="propPresentOnList"/>
+          <include name="promotionBanner"/>
         </methods>
       </class> <!-- tkptest.tests.UnoLogin -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [Suite] -->

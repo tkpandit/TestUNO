@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 09 10:16:40 IST 2024</td>
+<td>Started on:</td><td>Sun May 12 11:14:30 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>26 seconds (26090 ms)</td>
+<tr><td>Total time:</td><td>23 seconds (23348 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tkptest.tests.UnoLogin.dashboardPageUrl()'><b>dashboardPageUrl</b><br>Test class: tkptest.tests.UnoLogin</td>
-<td><div><pre>java.lang.AssertionError: expected [https://uno-qa.rategain.com/crs-dashboard] but found [https://uno-qa.rategain.com/intermediate-Page]
-	at tkptest.tests.UnoLogin.dashboardPageUrl(UnoLogin.java:45)
+<td title='tkptest.tests.UnoLogin.propertySetup()'><b>propertySetup</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to no longer be visible: By.cssSelector: .loader (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.201, chrome: {chromedriverVersion: 124.0.6367.201 (46cf136d27d..., userDataDir: C:\Users\TAPANP~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60390}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60390/devtoo..., se:cdpVersion: 124.0.6367.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68f6fbc17db6db9f64e9e6d24ed56b73
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at tkptest.AbstractComponents.AbstractComponent.waitForElementToDisappear(AbstractComponent.java:29)
+	at tkptest.pageObject.PropetySetupPage.propertyListingCountRow(PropetySetupPage.java:98)
+	at tkptest.tests.UnoLogin.propertySetup(UnoLogin.java:92)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace231191650", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace231191650'><pre>java.lang.AssertionError: expected [https://uno-qa.rategain.com/crs-dashboard] but found [https://uno-qa.rategain.com/intermediate-Page]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at tkptest.tests.UnoLogin.dashboardPageUrl(UnoLogin.java:45)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace95964948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace95964948'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to no longer be visible: By.cssSelector: .loader (tried for 4 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.201, chrome: {chromedriverVersion: 124.0.6367.201 (46cf136d27d..., userDataDir: C:\Users\TAPANP~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60390}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60390/devtoo..., se:cdpVersion: 124.0.6367.201, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68f6fbc17db6db9f64e9e6d24ed56b73
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at tkptest.AbstractComponents.AbstractComponent.waitForElementToDisappear(AbstractComponent.java:29)
+	at tkptest.pageObject.PropetySetupPage.propertyListingCountRow(PropetySetupPage.java:98)
+	at tkptest.tests.UnoLogin.propertySetup(UnoLogin.java:92)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,7 +130,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
+<td>4</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -130,12 +142,22 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tkptest.tests.UnoLogin.megaMenuTitle()'><b>megaMenuTitle</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td title='tkptest.tests.UnoLogin.propertyListPage()'><b>propertyListPage</b><br>Test class: tkptest.tests.UnoLogin</td>
 <td></td>
-<td>1</td>
+<td>7</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
 <tr>
-<td title='tkptest.tests.UnoLogin.dashboardDefaultProperty()'><b>dashboardDefaultProperty</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td title='tkptest.tests.UnoLogin.dashboardPageTitle()'><b>dashboardPageTitle</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td></td>
+<td>0</td>
+<td>tkptest.tests.UnoLogin@350aac89</td></tr>
+<tr>
+<td title='tkptest.tests.UnoLogin.megaMenuTitle()'><b>megaMenuTitle</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td></td>
+<td>0</td>
+<td>tkptest.tests.UnoLogin@350aac89</td></tr>
+<tr>
+<td title='tkptest.tests.UnoLogin.promotionBanner()'><b>promotionBanner</b><br>Test class: tkptest.tests.UnoLogin</td>
 <td></td>
 <td>1</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
@@ -145,29 +167,19 @@ function toggleAllBoxes() {
 <td>2</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
 <tr>
-<td title='tkptest.tests.UnoLogin.propertyListPage()'><b>propertyListPage</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td title='tkptest.tests.UnoLogin.assertSuccessLogin()'><b>assertSuccessLogin</b><br>Test class: tkptest.tests.UnoLogin</td>
 <td></td>
-<td>13</td>
+<td>5</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
 <tr>
-<td title='tkptest.tests.UnoLogin.promotionBanner()'><b>promotionBanner</b><br>Test class: tkptest.tests.UnoLogin</td>
-<td></td>
-<td>0</td>
-<td>tkptest.tests.UnoLogin@350aac89</td></tr>
-<tr>
-<td title='tkptest.tests.UnoLogin.dashboardPageTitle()'><b>dashboardPageTitle</b><br>Test class: tkptest.tests.UnoLogin</td>
-<td></td>
-<td>0</td>
-<td>tkptest.tests.UnoLogin@350aac89</td></tr>
-<tr>
-<td title='tkptest.tests.UnoLogin.RoomSetup()'><b>RoomSetup</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td title='tkptest.tests.UnoLogin.dashboardPageUrl()'><b>dashboardPageUrl</b><br>Test class: tkptest.tests.UnoLogin</td>
 <td></td>
 <td>1</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
 <tr>
-<td title='tkptest.tests.UnoLogin.assertSuccessLogin()'><b>assertSuccessLogin</b><br>Test class: tkptest.tests.UnoLogin</td>
+<td title='tkptest.tests.UnoLogin.dashboardDefaultProperty()'><b>dashboardDefaultProperty</b><br>Test class: tkptest.tests.UnoLogin</td>
 <td></td>
-<td>5</td>
+<td>0</td>
 <td>tkptest.tests.UnoLogin@350aac89</td></tr>
 </table><p>
 </body>

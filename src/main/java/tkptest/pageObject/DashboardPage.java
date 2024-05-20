@@ -2,7 +2,6 @@ package tkptest.pageObject;
 
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,12 +14,11 @@ import tkptest.AbstractComponents.AbstractComponent;
 
 
 
-
-public class Dashboard extends AbstractComponent{
+public class DashboardPage extends AbstractComponent{
 	
 	WebDriver driver;
 	
-	public Dashboard(WebDriver driver) {
+	public DashboardPage(WebDriver driver) {
         super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);

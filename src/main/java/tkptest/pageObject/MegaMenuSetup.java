@@ -28,8 +28,8 @@ public class MegaMenuSetup extends AbstractComponent {
 
 	@FindBy(xpath = "//a[normalize-space()='General']")
 	WebElement generalPolicyLink;
-	
-	@FindBy(xpath="//a[normalize-space()='Tax/Charges']")
+
+	@FindBy(xpath = "//a[normalize-space()='Tax/Charges']")
 	WebElement taxLink;
 
 	@FindBy(xpath = "//a[normalize-space()='Room']")
@@ -64,7 +64,7 @@ public class MegaMenuSetup extends AbstractComponent {
 
 	@FindBy(xpath = "//a[normalize-space()='Cluster']")
 	WebElement clusterLink;
-	
+
 	By loader = By.cssSelector(".loader");
 
 	public void masterOptionSetup(String givenOption) {
@@ -104,7 +104,7 @@ public class MegaMenuSetup extends AbstractComponent {
 		}
 	}
 
-	public void policySetup(String givenOption) {
+	public void policyOptionSetup(String givenOption) {
 		waitForElementToDisappear(loader);
 		actions = new Actions(driver);
 		for (WebElement option : options) {
@@ -119,7 +119,7 @@ public class MegaMenuSetup extends AbstractComponent {
 				case "Tax/Charges":
 					taxLink.click();
 					return;
-					
+
 				default:
 					// Handle invalid option
 					System.out.println("Invalid option: " + givenOption);
@@ -152,13 +152,14 @@ public class MegaMenuSetup extends AbstractComponent {
 				case "Cluster":
 					clusterLink.click();
 					return;
-					
+
 				default:
 					// Handle invalid option
 					System.out.println("Invalid option: " + givenOption);
 					return;
 				}
 			}
+			waitForElementToDisappear(loader);
 		}
 	}
 }

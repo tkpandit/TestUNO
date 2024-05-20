@@ -15,7 +15,7 @@ public class AbstractComponent {
 	}
 
 	public void waitForElementToAppear(By findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 
 	}
@@ -25,13 +25,17 @@ public class AbstractComponent {
 	}
 	
 	public void waitForElementToDisappear(By findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
 	}
 	
 	public void waitForElementTobeClickable(By findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
 		wait.until(ExpectedConditions.elementToBeClickable(findBy));
-		
+	}
+	
+	public void waitForPageToLoadFully() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete'"));
 	}
 }

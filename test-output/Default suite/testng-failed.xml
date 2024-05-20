@@ -5,15 +5,9 @@
     <classes>
       <class name="tkptest.tests.UnoLogin">
         <methods>
-          <include name="RoomSetup"/>
           <include name="launchApplication"/>
-          <include name="assertSuccessLogin"/>
-          <include name="dashboardDefaultProperty"/>
-          <include name="dashboardPageTitle"/>
-          <include name="dashboardPageUrl"/>
-          <include name="megaMenuTitle"/>
-          <include name="promotionBanner"/>
-          <include name="propertyListPage"/>
+          <include name="propertySetup"/>
+          <include name="propPresentOnList"/>
         </methods>
       </class> <!-- tkptest.tests.UnoLogin -->
     </classes>

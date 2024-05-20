@@ -29,6 +29,14 @@
 		</dependency>
 
 
+		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.27.0</version>
+		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -45,6 +53,20 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- SLF4J API -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.32</version> <!-- or the latest version -->
+		</dependency>
+
+		<!-- Logback implementation -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.6</version> <!-- or the latest version -->
+		</dependency>
+
 
 		<!--https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
@@ -57,8 +79,31 @@
 			<artifactId>seleniumTest</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
 	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>Regression</id>
+			<build>
+				<pluginManagement><!-- lock down plugins versions to avoid using
+					Maven
+			defaults (may be moved to parent pom) -->
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.2.5</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>testSuite/testng.xml</suiteXmlFile>
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven
@@ -76,13 +121,25 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.0.2</version>
 				</plugin>
+
 				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.0</version>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.2.5</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testSuit/testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
 				</plugin>
 				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.22.1</version>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version> <!-- or the latest version -->
+					<configuration>
+						<source>1.9</source>
+						<target>1.9</target>
+					</configuration>
 				</plugin>
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
